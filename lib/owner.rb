@@ -1,8 +1,13 @@
 require "pry"
 
 class Owner
+<<<<<<< HEAD
   attr_reader :species 
   attr_accessor :name, :pets
+=======
+  attr_reader :species, :pets
+  attr_accessor :name
+>>>>>>> 9015ae61edc1d8d4ad31d848283c56d8adda2514
   
   @@all = []
   
@@ -31,6 +36,7 @@ class Owner
   
   def buy_fish (name)
     new_fish = Fish.new(name)
+<<<<<<< HEAD
     @pets[:fishes] << new_fish
     @pets
   end
@@ -80,4 +86,12 @@ class Owner
     number_of_fish = @pets[:fishes].size
     "I have #{number_of_fish} fish, #{number_of_dogs} dog(s), and #{number_of_cats} cat(s)."
   end
+=======
+    @pets[:fishes] = new_fish
+    @pets
+    binding.pry
+  end
+  
+  
+>>>>>>> 9015ae61edc1d8d4ad31d848283c56d8adda2514
 end
